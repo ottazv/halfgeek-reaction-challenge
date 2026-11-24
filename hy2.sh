@@ -1,5 +1,5 @@
 #!/usr/bin/env bash    #本视频为免费主机分享，本程序仅作演示使用，不做任何科学上网分享，大家可以自由发挥去找自己想要的资源。
-PORT=8080              # 改成你的演示端口
+PORT=${PORT:-8080}      # 优先用平台给的 PORT 环境变量，没有就默认 8080
 PUBLIC_HOST=""         # 远程演示时填写服务器公网 IPv4 或域名
 
 exec python3 - "$PORT" "$PUBLIC_HOST" <<'PY'
